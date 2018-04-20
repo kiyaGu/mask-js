@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+- node
+before_deploy:
+- npm run build
+deploy:
+  skip_cleanup: true
+  provider: npm
+  email: kiya.gurmesa@gmail.com
+  api_key:
+    secure: x9OGBTJCZ3szoBqMBb58eWshNhj4q7ShegOZ7VKBvVzQJcd0aGvtUmilwsyFYlsuLAi5Kc/QrkwodF2c7lCMvo7218yrK6Yd3q1wWxj4jP7HfiHXkv+BCt+STXVxyL5ETwmNvQbVgoBOGB1xYP3x56oXdIqTyyTMpB1XollgLO543CF5v7lFKWRBxtgv3nkbHHE1y8PmeioHUbXIQbySgSlkgc+tiopWGzCF8bCiN2McEpgbVnY3Gk8bTXEeMY/m072tXzxoM2KHXeegQP3oqmqouQLsflm6Aj7ajSs8sWRwUGQWrfqrUdXOktw9HI/5x86Olh95+cjagVKhnXKYHdAFO2Ipe/BpA3VErCosoezfrBgexsLqrJEDhg4YqbtYQfWu65pH8wQcW9oDqysi5vyMNPihBa6qWvojVWKBJtvXfDGFVAx6sgCdrCjKCnznq6i68R/QRnHjaAXBu1hFFhC82aTqhHP5QXodx6uHdzizmYcT/e8X/vMbmFohAgQK6ddkZUrVB0B0Y1b5Ng3Ekls5ECzF1kgIYPs/aHzJ139r/mrI4URjIFuzErHTbHnIwLDrD8Q+Mq1hpkqmwjN/LGIzZKDprge/wx8kAip5L6aJArTH63xaVckJ3O2hIv0Ot5D6MYHNswrZoZ9dk9PeHzuAgeW1LBljkm0W1yyWpWM=
+  on:
+    tags: true
+    repo: kiyaGu/mask-js

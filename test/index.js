@@ -2,6 +2,7 @@ import assert from 'assert';
 import maskUSPhone from '../src/index';
 
 const testSamples = [
+  { input: '54312609876', expectedResult: '(543) 126-09876', description: 'should return (543) 126-09876' },
   { input: null, expectedResult: null, description: 'should return null when null is passed' },
   { input: undefined, expectedResult: null, description: 'should return null when undefined is passed' },
   { input: 'abc', expectedResult: 'abc', description: 'should return pristine value when receiving "abc"' },
