@@ -2,6 +2,8 @@ import assert from 'assert';
 import maskUSPhone from '../src/index';
 
 const testSamples = [
+  { input: null, expectedResult: null, description: 'should return null when null is passed' },
+  { input: undefined, expectedResult: null, description: 'should return null when undefined is passed' },
   { input: 'abc', expectedResult: 'abc', description: 'should return pristine value when receiving "abc"' },
   { input: 'abc1234567', expectedResult: 'abc1234567', description: 'should return pristine value when receiving "abc1234567"' },
   { input: 'abcdefghij', expectedResult: 'abcdefghij', description: 'should return pristine value when receiving "abcdefghij"' },
@@ -9,10 +11,10 @@ const testSamples = [
   { input: '5431260987', expectedResult: '(543) 126-0987', description: 'should return (543) 126-0987' },
 ];
 
-describe('Array', ()=>{
-  testSamples.forEach((sample)=>{
+describe('Array', () => {
+  testSamples.forEach((sample) => {
     it(sample.description, () => {
-      assert.equal(maskUSPhone(sample.input), sample.expectedResult)
-    })
-  })
+      assert.equal(maskUSPhone(sample.input), sample.expectedResult);
+    });
+  });
 });
